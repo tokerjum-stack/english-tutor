@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Английский с Самарой Ташбаевной — репетитор по английскому языку</title>
+<meta name="description" content="Индивидуальные уроки английского для взрослых и детей: разговорный английский, подготовка к IELTS и TOEFL, бизнес-английский, английский для путешествий. Запишитесь на бесплатное пробное занятие!">
+<style>
+  :root{
+    --blue:#5b9bd5;
+    --blue-dark:#3f7bb0;
+    --mint:#b9e4d0;
+    --mint-soft:#e4f5ee;
+    --bg:#f6fbfc;
+    --white:#ffffff;
+    --ink:#2b3a46;
+    --muted:#5f7280;
+    --line:#dfeef3;
+    --radius:16px;
+    --shadow:0 10px 30px rgba(91,155,213,.12);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .container{width:min(1100px,92%);margin:0 auto}
+
+  /* Nav */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(246,251,252,.9);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .brand{font-weight:700;color:var(--blue-dark);font-size:1.05rem}
+  .brand .accent{color:var(--blue)}
+  .nav-links{display:flex;gap:24px;list-style:none;margin:0;padding:0}
+  .nav-links a{text-decoration:none;color:var(--ink);font-weight:500;font-size:.95rem}
+  .nav-links a:hover{color:var(--blue)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+  .burger span{width:24px;height:2.5px;background:var(--blue-dark);border-radius:2px}
+
+  /* Hero */
+  .hero{padding:70px 0 60px;text-align:center;background:
+      radial-gradient(circle at 15% 20%,rgba(185,228,208,.35),transparent 45%),
+      radial-gradient(circle at 85% 15%,rgba(91,155,213,.18),transparent 45%),
+      linear-gradient(180deg,#ffffff,var(--bg));
+  }
+  .hero h1{font-size:clamp(1.7rem,4.5vw,3rem);margin:.2em 0 .4em;font-weight:800}
+  .hero h1 .grad{background:linear-gradient(90deg,var(--blue),var(--blue-dark));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p.lead{max-width:640px;margin:0 auto 28px;color:var(--muted);font-size:clamp(1rem,2.2vw,1.15rem)}
+  .badges{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-bottom:34px}
+  .badge{background:var(--white);border:1px solid var(--line);padding:8px 16px;border-radius:999px;font-size:.9rem;color:var(--ink);box-shadow:var(--shadow)}
+  .badge b{color:var(--blue-dark)}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;justify-content:center;
+    padding:14px 28px;border-radius:999px;border:none;cursor:pointer;
+    font-size:1rem;font-weight:700;text-decoration:none;transition:.2s;
+  }
+  .btn-primary{background:var(--blue);color:#fff;box-shadow:0 8px 20px rgba(91,155,213,.35)}
+  .btn-primary:hover{background:var(--blue-dark);transform:translateY(-2px)}
+  .btn-ghost{background:#fff;color:var(--blue-dark);border:2px solid var(--blue);}
+  .btn-ghost:hover{background:var(--mint-soft)}
+  .btn-mint{background:var(--mint);color:#1e4a3a}
+  .btn-mint:hover{filter:brightness(.97);transform:translateY(-2px)}
+
+  /* Sections */
+  section{padding:64px 0}
+  .section-head{text-align:center;margin-bottom:42px}
+  .eyebrow{color:var(--blue);text-transform:uppercase;letter-spacing:.14em;font-weight:700;font-size:.8rem}
+  .section-head h2{font-size:clamp(1.5rem,3.5vw,2.1rem);margin:.35em 0 0;font-weight:800}
+  .section-head p.sub{color:var(--muted);margin-top:.5em}
+
+  .two-col{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
+
+  /* About */
+  .about-card{background:var(--white);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow);border:1px solid var(--line)}
+  .about-card h3{color:var(--blue-dark);margin-top:0}
+  .about-card ul{padding-left:20px;color:var(--muted);margin:0}
+  .about-card li{margin:8px 0}
+  .portrait{
+    background:linear-gradient(135deg,var(--mint),var(--blue));
+    border-radius:var(--radius);
+    padding:4px;
+  }
+  .portrait-inner{background:#fff;border-radius:calc(var(--radius) - 4px);padding:30px;text-align:center;height:100%}
+  .avatar{
+    width:130px;height:130px;border-radius:50%;margin:0 auto 18px;
+    background:var(--mint-soft);display:flex;align-items:center;justify-content:center;
+    font-size:3.4rem;color:var(--blue-dark);
+  }
+  .portrait-inner h3{margin:.2em 0;color:var(--ink)}
+  .portrait-inner .role{color:var(--blue);font-weight:600}
+  .stat-row{display:flex;justify-content:center;gap:26px;margin-top:20px;flex-wrap:wrap}
+  .stat b{display:block;font-size:1.4rem;color:var(--blue-dark)}
+  .stat span{color:var(--muted);font-size:.85rem}
+
+  /* Services */
+  .bg-mint{background:var(--mint-soft)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+  .card{background:var(--white);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);border:1px solid var(--line);transition:.2s;display:flex;flex-direction:column}
+  .card:hover{transform:translateY(-6px)}
+  .icon{
+    width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+    font-size:1.7rem;margin-bottom:16px;
+  }
+  .c1{background:#e3f0fb}.c2{background:#e4f5ee}.c3{background:#fdf3dc}.c4{background:#f4e9fb}
+  .card h3{margin:.1em 0 .4em;color:var(--ink);font-size:1.1rem}
+  .card p{color:var(--muted);font-size:.95rem;flex:1}
+  .card .tag{color:var(--blue-dark);font-weight:700;font-size:.9rem;margin-top:14px}
+
+  /* Prices */
+  .price-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+  .price-card{background:var(--white);border-radius:var(--radius);padding:30px 26px;box-shadow:var(--shadow);border:1px solid var(--line);text-align:center;display:flex;flex-direction:column}
+  .price-card.featured{outline:3px solid var(--blue);position:relative}
+  .ribbon{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;padding:4px 14px;border-radius:999px;font-size:.75rem;font-weight:700;white-space:nowrap}
+  .price-card h3{margin:0 0 6px}
+  .price-card .type{color:var(--muted);font-size:.85rem;min-height:2.6em}
+  .price-card .price{font-size:1.9rem;font-weight:800;color:var(--blue-dark);margin:14px 0}
+  .price-card .price small{font-size:.85rem;color:var(--muted);font-weight:400}
+  .price-card .btn{margin-top:auto}
+
+  /* Reviews */
+  .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+  .review{background:var(--white);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);border:1px solid var(--line);display:flex;flex-direction:column}
+  .stars{color:#f2b01e;letter-spacing:2px;font-size:1.1rem}
+  .review p.quote{color:var(--ink);font-style:italic;flex:1;margin:14px 0 18px}
+  .review .author{display:flex;align-items:center;gap:12px}
+  .review .who{border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:1.1rem}
+  .w1{background:var(--blue)}.w2{background:var(--blue-dark)}.w3{background:#7fbf9b}
+  .review .name{font-weight:700;font-size:.95rem}
+  .review .meta{color:var(--muted);font-size:.82rem}
+
+  /* CTA */
+  .cta{text-align:center}
+  .cta-box{background:linear-gradient(135deg,var(--blue),var(--mint));border-radius:20px;padding:52px 30px;color:#fff}
+  .cta-box h2{font-size:clamp(1.5rem,4vw,2.2rem);margin:0 0 12px;font-weight:800}
+  .cta-box p{max-width:520px;margin:0 auto 26px;opacity:.95}
+  .cta-box .btn{background:#fff;color:var(--blue-dark)}
+  .cta-box .btn:hover{background:var(--mint-soft)}
+
+  /* Contact */
+  .contact-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:34px}
+  .contact-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px;text-align:center;box-shadow:var(--shadow)}
+  .contact-card .ci{font-size:1.8rem}
+  .contact-card h4{margin:.5em 0 .2em;color:var(--ink)}
+  .contact-card a.tel{font-size:1.15rem;font-weight:700;color:var(--blue-dark);text-decoration:none}
+  .contact-card a.tel:hover{text-decoration:underline}
+  .contact-card .note{color:var(--muted);font-size:.9rem}
+
+  /* Footer */
+  footer{background:var(--ink);color:#cfdde6;padding:30px 0;text-align:center;font-size:.9rem}
+  footer a{color:var(--mint)}
+
+  /* Mobile nav */
+  @media (max-width:820px){
+    .nav-links{position:fixed;top:0;right:0;height:100vh;width:min(75vw,300px);
+      background:#fff;flex-direction:column;padding:90px 30px;gap:22px;
+      box-shadow:-10px 0 30px rgba(0,0,0,.1);transform:translateX(100%);transition:.3s;z-index:60}
+    .nav-links.open{transform:translateX(0)}
+    .nav-links a{font-size:1.05rem}
+    .burger{display:flex;z-index:70}
+    .two-col{grid-template-columns:1fr}
+    .overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:.3s;z-index:55}
+    .overlay.show{opacity:1;pointer-events:auto}
+  }
+  @media (max-width:480px){
+    section{padding:48px 0}
+    .about-card,.card,.review{padding:22px}
+    .cta-box{padding:38px 22px}
+  }
+</style>
+</head>
+<body>
+
+<!-- Навигация -->
+<header class="nav">
+  <div class="container nav-inner">
+    <div class="brand">English <span class="accent">with Samara</span></div>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#prices">Цены</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+    <button class="burger" id="burger" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="overlay" id="overlay"></div>
+
+<!-- Главный экран -->
+<section class="hero" id="top">
+  <div class="container">
+    <div class="badges">
+      <span class="badge">💬 Разговорный</span>
+      <span class="badge">🧒 Для детей и взрослых</span>
+      <span class="badge">🎓 Подготовка к экзаменам</span>
+      <span class="badge">🗺️ Для путешествий</span>
+    </div>
+    <h1>Английский с Самарой Ташбаевной — <span class="grad">заговори уверенно!</span></h1>
+    <p class="lead">Индивидуальные уроки для взрослых и детей. Разговорный английский, подготовка к экзаменам, бизнес-английский.</p>
+    <a href="#contact" class="btn btn-primary">Записаться на пробное занятие</a>
+  </div>
+</section>
+
+<!-- Обо мне -->
+<section id="about">
+  <div class="container two-col">
+    <div class="portrait">
+      <div class="portrait-inner">
+        <div class="avatar">👩‍🏫</div>
+        <h3>Токтогулова<br>Самара Ташбаевна</h3>
+        <div class="role">Репетитор английского языка</div>
+        <div class="stat-row">
+          <div class="stat"><b>10+</b><span>лет опыта</span></div>
+          <div class="stat"><b>300+</b><span>учеников</span></div>
+          <div class="stat"><b>100%</b><span>индивидуально</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="about-card">
+      <span class="eyebrow">Обо мне</span>
+      <h3>Преподаю с любовью к языку</h3>
+      <p>Меня зовут Самара Ташбаевна. Я помогаю своим ученикам не просто выучить английский, а свободно говорить на нём — без страха ошибиться.</p>
+      <ul>
+        <li><b>Образование:</b> высшее лингвистическое образование, сертификаты международного уровня (CELTA/TEFL);</li>
+        <li><b>Опыт:</b> более 10 лет преподавания — школьникам, студентам и взрослым специалистам;</li>
+        <li><b>Подход:</b> программа под ваш уровень и цель, акцент на разговорную практику и живой язык;</li>
+        <li><b>Атмосфера:</b> занятия проходят легко и комфортно — здесь не страшно ошибаться.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Услуги -->
+<section id="services" class="bg-mint">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Услуги</span>
+      <h2>Что я предлагаю</h2>
+      <p class="sub">Подберу программу под ваши цели — от первых слов до свободного общения</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="icon c1">📘</div>
+        <h3>Общий курс английского</h3>
+        <p>Системный курс от начального до продвинутого уровня: грамматика, лексика, чтение и письмо без скуки.</p>
+        <span class="tag">Для взрослых и детей</span>
+      </div>
+      <div class="card">
+        <div class="icon c2">💬</div>
+        <h3>Разговорный английский</h3>
+        <p>Снимаем языковой барьер и учимся выражать мысли свободно. Много практики и живых диалогов.</p>
+        <span class="tag">Для уверенного общения</span>
+      </div>
+      <div class="card">
+        <div class="icon c3">🎓</div>
+        <h3>Подготовка к экзаменам</h3>
+        <p>Целенаправленная подготовка к IELTS и TOEFL: стратегии, пробные тесты, разбор ошибок.</p>
+        <span class="tag">IELTS · TOEFL</span>
+      </div>
+      <div class="card">
+        <div class="icon c4">✈️</div>
+        <h3>Английский для путешествий</h3>
+        <p>Экспресс-программа: аэропорт, отель, кафе, экскурсии — всё, что нужно в поездке.</p>
+        <span class="tag">Быстрый старт</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Цены -->
+<section id="prices">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Цены</span>
+      <h2>Стоимость занятий</h2>
+      <p class="sub">Цена зависит от курса и длительности — уточните детали по телефону</p>
+    </div>
+    <div class="price-cards">
+      <div class="price-card">
+        <h3>Пробное занятие</h3>
+        <div class="type">Оценка уровня и знакомство с методикой</div>
+        <div class="price">Бесплатно</div>
+        <a href="#contact" class="btn btn-ghost">Записаться</a>
+      </div>
+      <div class="price-card featured">
+        <span class="ribbon">Популярно</span>
+        <h3>Индивидуальный урок</h3>
+        <div class="type">Онлайн или офлайн · 60 минут</div>
+        <div class="price">1000 <small>сом / час</small></div>
+        <a href="#contact" class="btn btn-primary">Записаться</a>
+      </div>
+      <div class="price-card">
+        <h3>Абонемент</h3>
+        <div class="type">8 занятий в месяц со скидкой</div>
+        <div class="price">Договорная</div>
+        <a href="#contact" class="btn btn-ghost">Записаться</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Отзывы -->
+<section id="reviews" class="bg-mint">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Отзывы</span>
+      <h2>Что говорят ученики</h2>
+    </div>
+    <div class="reviews">
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p class="quote">«Готовилась к IELTS три месяца. Результат — 7.5! Самара Ташбаевна объясняет сложное простыми словами и верит в каждого ученика. Очень благодарна!»</p>
+        <div class="author">
+          <div class="who w1">А</div>
+          <div><div class="name">Айгерим</div><div class="meta">Студентка · IELTS 7.5</div></div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p class="quote">«Дочь занимается уже год — прогресс огромный. Раньше боялась английского, а теперь сама смотрит фильмы в оригинале и болтает с иностранцами. Спасибо!»</p>
+        <div class="author">
+          <div class="who w2">Н</div>
+          <div><div class="name">Нургуль</div><div class="meta">Мама ученицы 12 лет</div></div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p class="quote">«Нужен был разговорный английский для работы с партнёрами. За полгода стал уверенно проводить переговоры. Материал всегда интересный, на реальных темах.»</p>
+        <div class="author">
+          <div class="who w3">Б</div>
+          <div><div class="name">Бектур</div><div class="meta">Предприниматель</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Призыв к действию -->
+<section class="cta">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Запишитесь на бесплатное пробное занятие!</h2>
+      <p>Познакомимся, определим ваш уровень и наметим план обучения. Это бесплатно и ни к чему не обязывает.</p>
+      <a href="tel:+996220095297" class="btn">📞 Связаться</a>
+    </div>
+  </div>
+</section>
+
+<!-- Контакты -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Контакты</span>
+      <h2>Свяжитесь со мной</h2>
+      <p class="sub">Позвоните или напишите — отвечу и подберём удобное время</p>
+    </div>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="ci">📞</div>
+        <h4>Телефон</h4>
+        <a class="tel" href="tel:+996220095297">+996 220 095 297</a>
+      </div>
+      <div class="contact-card">
+        <div class="ci">⏰</div>
+        <h4>Время занятий</h4>
+        <div class="note">Ежедневно с 9:00 до 20:00</div>
+      </div>
+      <div class="contact-card">
+        <div class="ci">💻</div>
+        <h4>Формат</h4>
+        <div class="note">Онлайн и офлайн</div>
+      </div>
+      <div class="contact-card">
+        <div class="ci">👩‍🏫</div>
+        <h4>Связаться</h4>
+        <a class="tel" href="tel:+996220095297">Набрать номер</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>© 2024 Токтогулова Самара Ташбаевна · Репетитор английского языка</div>
+    <div style="margin-top:6px">📞 <a href="tel:+996220095297">+996 220 095 297</a></div>
+  </div>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  const overlay = document.getElementById('overlay');
+
+  function closeNav(){
+    navLinks.classList.remove('open');
+    overlay.classList.remove('show');
+  }
+  burger.addEventListener('click', function(e){
+    e.stopPropagation();
+    navLinks.classList.toggle('open');
+    overlay.classList.toggle('show');
+  });
+  overlay.addEventListener('click', closeNav);
+  // Закрываем меню при выборе пункта
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', closeNav);
+  });
+</script>
+
+</body>
+</html>
