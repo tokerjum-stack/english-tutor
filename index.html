@@ -152,6 +152,17 @@
 
   .two-col{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
 
+  /* Видео */
+  .video-block{display:flex;flex-direction:column;align-items:center;gap:22px}
+  .video-frame{
+    position:relative;width:min(340px,86vw);aspect-ratio:9/16;
+    border-radius:26px;overflow:hidden;background:#fff;
+    border:1px solid var(--line);box-shadow:0 18px 44px rgba(91,155,213,.22);
+  }
+  .video-frame video{width:100%;height:100%;object-fit:cover;display:block}
+  .video-note{color:var(--muted);font-size:.92rem;text-align:center;max-width:420px;margin:0}
+  .video-block .btn{margin-top:2px}
+
   /* About */
   .about-card{background:var(--white);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow);border:1px solid var(--line)}
   .about-card h2{color:var(--blue-dark);margin-top:0;font-size:1.25rem}
@@ -329,6 +340,7 @@
     <a class="brand" href="#top">English <span class="accent">with Samara</span></a>
     <nav aria-label="Основная навигация">
       <ul class="nav-links" id="navLinks">
+        <li><a href="#video">Видео</a></li>
         <li><a href="#about">Обо мне</a></li>
         <li><a href="#services">Услуги</a></li>
         <li><a href="#prices">Цены</a></li>
@@ -446,6 +458,26 @@
       <circle cx="262" cy="86" r="4" fill="#5b9bd5" opacity=".28"/>
       <circle cx="470" cy="146" r="5" fill="#b9e4d0" opacity=".8"/>
     </svg>
+  </div>
+</section>
+
+<!-- Видео -->
+<section id="video">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Видео</span>
+      <h2>20 секунд о занятиях</h2>
+      <p class="sub">Коротко о подходе, результатах и первом шаге</p>
+    </div>
+    <div class="video-block">
+      <div class="video-frame">
+        <video src="media/promo-samara.mp4" poster="media/promo-poster.jpg"
+               autoplay muted loop playsinline preload="metadata"
+               aria-label="Промо-ролик: английский с Самарой Ташбаевной"></video>
+      </div>
+      <p class="video-note">Коротко, без звука — самое важное за 20 секунд.</p>
+      <a href="#contact" class="btn btn-mint">Записаться на бесплатное занятие</a>
+    </div>
   </div>
 </section>
 
